@@ -1,0 +1,3 @@
+Flask
+exa-py
+python-dotenv
