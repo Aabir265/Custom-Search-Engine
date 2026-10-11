@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Search Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Comic+Neue:ital,wght@1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="stars stars--2"></div>
+
+  <div class="magnifier" aria-hidden="true">
+    <span class="lens">
+      <span class="glare"></span>
+    </span>
+    <span class="handle"></span>
+  </div>
+
+  <main class="panel">
+    <h1 class="title">Custom Search Engine</h1>
+
+    <form class="search-form" id="searchForm">
+      <input
+        type="text"
+        class="search-input"
+        id="searchInput"
+        placeholder="Find out your Interests..."
+        aria-label="Search your interests"
+        autocomplete="off"
+      />
+      <button type="submit" class="search-btn">SEARCH</button>
+    </form>
+    <div id="results"></div>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
